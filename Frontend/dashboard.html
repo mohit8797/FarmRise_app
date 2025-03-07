@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmRise Dashboard</title>
+    <link rel="stylesheet" href="/Frontend/css/dashboard.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-leaf"></i>
+            <span>FarmRise</span>
+        </div>
+        <div class="user-menu">
+            <span>Welcome, Farmer Mohit Redhu</span>
+            <i class="fas fa-user-circle"></i>
+        </div>
+    </header>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="/Frontend/index.html" class="active"><i class="fas fa-home"></i> Home </a></li>
+                <li><a href="/Frontend/crop.html"><i class="fas fa-seedling"></i> Crops</a></li>
+                <li><a href="/Frontend/fruit.html"><i class="fas fa-seedling"></i> Fruits</a></li>
+                <li><a href="/Frontend/vegetable.html"><i class="fas fa-seedling"></i> Vegetables</a></li>
+                <li><a href="/Frontend/marketprice.html"><i class="fas fa-dollar-sign"></i> Market Prices</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="widget weather">
+                <h2>Weather Forecast</h2>
+                <div class="weather-info">
+                    <i class="fas fa-sun"></i>
+                    <span>75°F</span>
+                    <p>Sunny</p>
+                </div>
+            </div>
+            <div class="widget crop-prices">
+                <h2>Crop Prices</h2>
+                <ul>
+                    <li>Corn: $4.25/bushel</li>
+                    <li>Soybeans: $10.50/bushel</li>
+                    <li>Wheat: $6.75/bushel</li>
+                </ul>
+            </div>
+            <div class="widget tasks">
+                <h2>Tasks</h2>
+                <ul id="task-list">
+                    <li><input type="checkbox" id="task1"><label for="task1">Water tomatoes</label></li>
+                    <li><input type="checkbox" id="task2"><label for="task2">Check soil pH</label></li>
+                    <li><input type="checkbox" id="task3"><label for="task3">Order fertilizer</label></li>
+                </ul>
+                <input type="text" id="new-task" placeholder="Add a new task">
+                <button id="add-task">Add Task</button>
+            </div>
+            <div class="widget activity">
+                <h2>Recent Activity</h2>
+                <ul>
+                    <li>Planted 100 acres of corn</li>
+                    <li>Sold 500 bushels of wheat</li>
+                    <li>Repaired tractor</li>
+                </ul>
+            </div>
+        </main>
+    </div>
+    <script src="/Frontend/js/dashboard.js"></script>
+</body>
+</html>

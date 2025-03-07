@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmRise - Organic Farming E-commerce</title>
+    <link rel="stylesheet" href="/Frontend/css/styles.css">
+    <link href="https://unpkg.com/lucide-static/font/lucide.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo-container">
+                <i class="lucide-sprout logo-icon"></i>
+                <h1 class="logo">FarmRise</h1>
+            </div>
+            <div class="header-actions">
+                <div class="auth-buttons">  <!-- Fixed incorrect tag -->
+                    <a href="/Frontend/login.html">
+                        <button class="btn btn-outline">Login</button>
+                    </a>
+                    <a href="/Frontend/signup.html">
+                        <button class="btn btn-primary">Sign Up</button>
+                    </a>
+                    <a href="/Frontend/dashboard.html">
+                        <button class="btn btn-outline">Dashboard</button>
+                    </a>
+                </div>  <!-- Closing div was missing -->
+            
+                <button   class="icon-button cart-button" >
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <!-- FontAwesome Cart Icon -->
+                    <span class="cart-count"></span>  <!-- Dynamic Cart Count -->
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="banner">
+        <div class="banner-slides"></div>
+        <div class="banner-overlay">
+            <div class="banner-content">
+                <h2>Fresh Organic Produce</h2>
+                <p>Direct from local farmers to your table</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="search-section container">
+        <div class="search-container">
+            <div class="search-box">
+                <i class="lucide-search"></i>
+                <input type="text" placeholder="Search for products...">
+                <div class="search-categories">
+                    <button class="category-btn active" data-category="all">All</button>
+                    <button class="category-btn" data-category="vegetables">Vegetables</button>
+                    <button class="category-btn" data-category="fruits">Fruits</button>
+                    <button class="category-btn" data-category="crops">Crops</button>
+                </div>
+            </div>
+            <div class="location-box">
+                <i class="lucide-map-pin"></i>
+                <input type="text" id="location-input" placeholder="Select location">
+                <button class="btn btn-outline location-detect">
+                    <i class="lucide-navigation"></i> Detect Location
+                </button>
+                <div class="location-suggestions" id="location-suggestions"></div>
+            </div>
+        </div>
+    </div>
+
+    <section class="recommendations-section container">
+        <h2>Recommended for You</h2>
+        <div class="recommendations-grid" id="recommendations-grid"></div>
+    </section>
+
+    <section class="products-section container">
+        <h2>Best-Selling Products</h2>
+        <div class="products-grid" id="products-grid"></div>
+    </section>
+
+    <section class="nearby-farmers container">
+        <h2>Farmers Near You</h2>
+        <div class="farmers-grid" id="farmers-grid"></div>
+    </section>
+
+    <section class="features-section">
+        <div class="container">
+            <h2>Why Choose Us</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="lucide-leaf"></i>
+                    <h3>Organic Products</h3>
+                    <p>100% certified organic produce from trusted farmers</p>
+                </div>
+                <div class="feature-card">
+                    <i class="lucide-users"></i>
+                    <h3>Community Support</h3>
+                    <p>Supporting local farmers and sustainable practices</p>
+                </div>
+                <div class="feature-card">
+                    <i class="lucide-truck"></i>
+                    <h3>Fresh Delivery</h3>
+                    <p>Farm-fresh products delivered to your doorstep</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mission-section">
+        <div class="container">
+            <h2>Our Mission</h2>
+            <div class="mission-content">
+                <p>At FarmRise, we're committed to promoting sustainable and organic farming practices that benefit both our environment and communities. Our network of certified organic farmers works tirelessly to produce the highest quality organic produce while maintaining the health of our soil and ecosystems.</p>
+                <div class="certifications">
+                    <div class="certification">
+                        <h3>100% Organic Certification</h3>
+                    </div>
+                    <div class="certification">
+                        <h3>Sustainable Farming Practices</h3>
+                    </div>
+                    <div class="certification">
+                        <h3>Support Local Farmers</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart">×</button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total">₹0.00</span>
+            </div>
+            <button class="btn btn-primary checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div class="logo-container">
+                        <i class="lucide-sprout logo-icon"></i>
+                        <h3>FarmRise</h3>
+                    </div>
+                    <p>Promoting sustainable and organic farming practices for a better future.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="lucide-mail"></i> mohitredhu2005@gmail.com</p>
+                        <p><i class="lucide-phone"></i> +91 74047-18377</p>
+                        <p><i class="lucide-map-pin"></i> Bennett University</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 FarmRise. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/Frontend/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/8e3a741560.js" crossorigin="anonymous"></script>
+</body>
+</html>

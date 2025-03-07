@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F5F5;
+    color: #333333;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo i {
+    margin-right: 0.5rem;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+}
+
+.user-menu span {
+    margin-right: 0.5rem;
+}
+
+.container {
+    display: flex;
+    min-height: calc(100vh - 60px);
+}
+
+nav {
+    width: 200px;
+    background-color: white;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-bottom: 1rem;
+}
+
+nav ul li a {
+    color: #333333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a i {
+    margin-right: 0.5rem;
+}
+
+nav ul li a.active {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+main {
+    flex: 1;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.widget {
+    background-color: white;
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.widget h2 {
+    margin-bottom: 1rem;
+    color: #4CAF50;
+}
+
+.weather-info {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.weather-info i {
+    color: #FFA000;
+    margin-right: 1rem;
+}
+
+.crop-prices ul, .activity ul {
+    list-style-type: none;
+}
+
+.crop-prices li, .activity li {
+    margin-bottom: 0.5rem;
+}
+
+#task-list {
+    list-style-type: none;
+    margin-bottom: 1rem;
+}
+
+#task-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+#task-list input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+#new-task {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#add-task {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav ul li {
+        margin-bottom: 0;
+    }
+
+    nav ul li a {
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.8rem;
+    }
+
+    nav ul li a i {
+        margin-right: 0;
+        margin-bottom: 0.25rem;
+    }
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmRise - Crops</title>
+    <link rel="stylesheet" href="/Frontend/css/crop.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-leaf"></i>
+            <span>FarmRise</span>
+        </div>
+        <div class="user-menu">
+            <span>Welcome, Farmer John</span>
+            <i class="fas fa-user-circle"></i>
+        </div>
+    </header>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="/Frontend/dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="/Frontend/crop.html" class="active"><i class="fas fa-seedling"></i> Crops</a></li>
+                <li><a href="/Frontend/fruit.html" class="active"><i class="fas fa-seedling"></i> Fruits</a></li>
+                <li><a href="vegetable.html" class="active"><i class="fas fa-seedling"></i> Vegetables</a></li> 
+                <li><a href="/Frontend/marketprice.html"><i class="fas fa-dollar-sign"></i> Market Prices</a></li>
+            </ul>
+        </nav>
+        <main class="crops-page">
+            <h1>My Vegetables</h1>
+            <div class="crop-actions">
+                <button id="add-crop"><i class="fas fa-plus"></i> Add New Vegitable</button>
+                <select id="filter-crops">
+                    <option value="all">All Vegetables</option>
+                    <option value="Growing">Growing</option>
+                    <option value="Harvested">Harvested</option>
+                </select>
+            </div>
+            <div class="crop-list">
+                <div class="crop-item">
+                    <img src="/Images/Vegetables/brocoli.jpg" alt="Brocoli">
+                    <div class="crop-info">
+                        <h3>Brocoli</h3>
+                        <p><strong>Status:</strong> Growing</p>
+                        <p><strong>Planted:</strong> May 1, 2023</p>
+                        <p><strong>Expected Harvest:</strong> September 15, 2023</p>
+                    </div>
+                    <div class="crop-actions">
+                        <button class="view-details">View Details</button>
+                        <button class="edit-crop">Edit</button>
+                    </div>
+                </div>
+                <div class="crop-item">
+                    <img src="/Images/Vegetables/Cabbage.jpg" alt="Cabbage">
+                    <div class="crop-info">
+                        <h3>Cabbage</h3>
+                        <p><strong>Status:</strong> Growing</p>
+                        <p><strong>Planted:</strong> May 1, 2023</p>
+                        <p><strong>Expected Harvest:</strong> September 15, 2023</p>
+                    </div>
+                    <div class="crop-actions">
+                        <button class="view-details">View Details</button>
+                        <button class="edit-crop">Edit</button>
+                    </div>
+                    
+                </div>
+                <div class="crop-item">
+                    <img src="/Images/Vegetables/Carrot.jpg" alt="Carrot">
+                    <div class="crop-info">
+                        <h3>Carrot</h3>
+                        <p><strong>Status:</strong> Growing</p>
+                        <p><strong>Planted:</strong> May 1, 2023</p>
+                        <p><strong>Expected Harvest:</strong> September 15, 2023</p>
+                    </div>
+                    <div class="crop-actions">
+                        <button class="view-details">View Details</button>
+                        <button class="edit-crop">Edit</button>
+                    </div>
+                </div>
+                <div class="crop-item">
+                    <img src="/Images/Vegetables/Cauliflower.jpg" alt="Cauliflower">
+                    <div class="crop-info">
+                        <h3>Cauliflower</h3>
+                        <p><strong>Status:</strong> Growing</p>
+                        <p><strong>Planted:</strong> May 1, 2023</p>
+                        <p><strong>Expected Harvest:</strong> September 15, 2023</p>
+                    </div>
+                    <div class="crop-actions">
+                        <button class="view-details">View Details</button>
+                        <button class="edit-crop">Edit</button>
+                    </div>
+                </div>
+                <div class="crop-item">
+                    <img src="/Images/Vegetables/Green Capsicum.jpg" alt="Green Capsicum">
+                    <div class="crop-info">
+                        <h3>Green Capsicum</h3>
+                        <p><strong>Status:</strong> Growing</p>
+                        <p><strong>Planted:</strong> June 1, 2023</p>
+                        <p><strong>Expected Harvest:</strong> October 1, 2023</p>
+                    </div>
+                    <div class="crop-actions">
+                        <button class="view-details">View Details</button>
+                        <button class="edit-crop">Edit</button>
+                    </div>
+                </div>
+                <div class="crop-item">
+                    <img src="/Images/Vegetables/Onion.jpg" alt="Onion">
+                    <div class="crop-info">
+                        <h3>Onion</h3>
+                        <p><strong>Status:</strong> Harvested</p>
+                        <p><strong>Planted:</strong> October 1, 2022</p>
+                        <p><strong>Harvested:</strong> July 1, 2023</p>
+                    </div>
+                    <div class="crop-actions">
+                        <button class="view-details">View Details</button>
+                        <button class="edit-crop">Edit</button>
+                    </div>
+                </div>
+                <div class="crop-item">
+                    <img src="/Images/Vegetables/patato.jpg" alt="patato">
+                    <div class="crop-info">
+                        <h3>patato</h3>
+                        <p><strong>Status:</strong> Harvested</p>
+                        <p><strong>Planted:</strong> October 1, 2022</p>
+                        <p><strong>Harvested:</strong> July 1, 2023</p>
+                    </div>
+                    <div class="crop-actions">
+                        <button class="view-details">View Details</button>
+                        <button class="edit-crop">Edit</button>
+                    </div>
+                </div>
+                <div class="crop-item">
+                    <img src="/Images/Vegetables/Tomato.jpg" alt="Tomato">
+                    <div class="crop-info">
+                        <h3>Tomato</h3>
+                        <p><strong>Status:</strong> Harvested</p>
+                        <p><strong>Planted:</strong> October 1, 2022</p>
+                        <p><strong>Harvested:</strong> July 1, 2023</p>
+                    </div>
+                    <div class="crop-actions">
+                        <button class="view-details">View Details</button>
+                        <button class="edit-crop">Edit</button>
+                    </div>
+                </div>
+                
+        </main>
+    </div>
+    <script src="/Frontend/js/crop.js"></script>
+</body>
+</html>
