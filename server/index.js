@@ -10,6 +10,7 @@ const { initDb } = require('../config/db');
 const app = express();
 
 const CLIENT_ORIGIN = process.env.CLIENT_ORIGIN || '*';
+const PORT = process.env.PORT || 5001;
 
 app.use(cors({ origin: CLIENT_ORIGIN, credentials: true }));
 app.use(express.json());
@@ -40,11 +41,9 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'Frontend', 'index.html'));
 });
 
-const PORT = process.env.PORT || 5001;
-
 const start = async () => {
   console.log('🚀 Starting FarmRise server...');
-  // await initDb(); // Tables already created
+  await initDb();
 
   app.listen(PORT, () => {
     console.log(`🚀 FarmRise Server running on port ${PORT}`);
