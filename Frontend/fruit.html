@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmRise - Fruits</title>
+    <link rel="stylesheet" href="/Frontend/css/common.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="module" src="/Frontend/js/common.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-leaf"></i>
+            <span>FarmRise</span>
+        </div>
+        <div class="user-menu">
+            <span>Welcome, Farmer</span>
+            <i class="fas fa-user-circle"></i>
+        </div>
+    </header>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="/Frontend/dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="/Frontend/crop.html"><i class="fas fa-seedling"></i> Crops</a></li>
+                <li><a href="/Frontend/fruit.html" class="active"><i class="fas fa-apple-alt"></i> Fruits</a></li>
+                <li><a href="/Frontend/vegetable.html"><i class="fas fa-carrot"></i> Vegetables</a></li> 
+                <li><a href="/Frontend/marketprice.html"><i class="fas fa-dollar-sign"></i> Market Prices</a></li>
+                <li><a href="/Frontend/index.html" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </nav>
+        <main class="products-page">
+            <h1 class="page-title">My Fruits</h1>
+            <div class="product-actions">
+                <button id="add-product"><i class="fas fa-plus"></i> Add New Fruit</button>
+                <select id="filter-products">
+                    <option value="all">All Fruits</option>
+                    <option value="Growing">Growing</option>
+                    <option value="Harvested">Harvested</option>
+                </select>
+            </div>
+            <div class="product-list">
+                <!-- Default fruits will be loaded automatically -->
+                <div class="product-item">
+                    <img src="/Images/Fruits/Apple.jpg" alt="Apple" onerror="this.src='/Images/placeholder.jpg'">
+                    <div class="product-info">
+                        <h3>Apple</h3>
+                        <p><strong>Price:</strong> ₹2.50/kg</p>
+                        <p><strong>Quantity:</strong> 200 kg</p>
+                        <p><strong>Status:</strong> Harvested</p>
+                        <p><strong>Planted:</strong> April 15, 2023</p>
+                        <p><strong>Harvest:</strong> September 1, 2023</p>
+                        <p><strong>Description:</strong> Crisp, juicy red apples, organically grown and hand-picked.</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="view-details">View Details</button>
+                        <button class="edit-product">Edit</button>
+                        <button class="delete-product">Delete</button>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="/Images/Fruits/Bananas.jpg" alt="Banana" onerror="this.src='/Images/placeholder.jpg'">
+                    <div class="product-info">
+                        <h3>Banana</h3>
+                        <p><strong>Price:</strong> ₹1.80/kg</p>
+                        <p><strong>Quantity:</strong> 150 kg</p>
+                        <p><strong>Status:</strong> Harvested</p>
+                        <p><strong>Planted:</strong> March 20, 2023</p>
+                        <p><strong>Harvest:</strong> August 15, 2023</p>
+                        <p><strong>Description:</strong> Sweet, ripe bananas perfect for eating fresh or cooking.</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="view-details">View Details</button>
+                        <button class="edit-product">Edit</button>
+                        <button class="delete-product">Delete</button>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="/Images/Fruits/Mango.jpg" alt="Mango" onerror="this.src='/Images/placeholder.jpg'">
+                    <div class="product-info">
+                        <h3>Mango</h3>
+                        <p><strong>Price:</strong> ₹3.50/kg</p>
+                        <p><strong>Quantity:</strong> 100 kg</p>
+                        <p><strong>Status:</strong> Harvested</p>
+                        <p><strong>Planted:</strong> February 1, 2023</p>
+                        <p><strong>Harvest:</strong> June 15, 2023</p>
+                        <p><strong>Description:</strong> King of fruits - sweet and juicy Alphonso mangoes.</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="view-details">View Details</button>
+                        <button class="edit-product">Edit</button>
+                        <button class="delete-product">Delete</button>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="/Images/Fruits/orange.jpg" alt="Orange" onerror="this.src='/Images/placeholder.jpg'">
+                    <div class="product-info">
+                        <h3>Orange</h3>
+                        <p><strong>Price:</strong> ₹2.20/kg</p>
+                        <p><strong>Quantity:</strong> 120 kg</p>
+                        <p><strong>Status:</strong> Harvested</p>
+                        <p><strong>Planted:</strong> January 10, 2023</p>
+                        <p><strong>Harvest:</strong> July 20, 2023</p>
+                        <p><strong>Description:</strong> Vitamin C rich oranges, sweet and tangy flavor.</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="view-details">View Details</button>
+                        <button class="edit-product">Edit</button>
+                        <button class="delete-product">Delete</button>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="/Images/Fruits/strawberry.jpg" alt="Strawberry" onerror="this.src='/Images/placeholder.jpg'">
+                    <div class="product-info">
+                        <h3>Strawberry</h3>
+                        <p><strong>Price:</strong> ₹4.00/kg</p>
+                        <p><strong>Quantity:</strong> 80 kg</p>
+                        <p><strong>Status:</strong> Harvested</p>
+                        <p><strong>Planted:</strong> March 1, 2023</p>
+                        <p><strong>Harvest:</strong> May 30, 2023</p>
+                        <p><strong>Description:</strong> Fresh, red strawberries bursting with flavor.</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="view-details">View Details</button>
+                        <button class="edit-product">Edit</button>
+                        <button class="delete-product">Delete</button>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="/Images/Fruits/Green Grapes.jpg" alt="Green Grapes" onerror="this.src='/Images/placeholder.jpg'">
+                    <div class="product-info">
+                        <h3>Green Grapes</h3>
+                        <p><strong>Price:</strong> ₹2.80/kg</p>
+                        <p><strong>Quantity:</strong> 90 kg</p>
+                        <p><strong>Status:</strong> Harvested</p>
+                        <p><strong>Planted:</strong> February 15, 2023</p>
+                        <p><strong>Harvest:</strong> June 10, 2023</p>
+                        <p><strong>Description:</strong> Seedless green grapes, sweet and refreshing.</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="view-details">View Details</button>
+                        <button class="edit-product">Edit</button>
+                        <button class="delete-product">Delete</button>
+                    </div>
+                </div>
+                <!-- More fruits will be loaded from Firebase -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Product Modal -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Fruit</h2>
+            <form id="product-form">
+                <div class="form-group">
+                    <label for="product-name">Fruit Name*</label>
+                    <input type="text" id="product-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="product-price">Price (per kg)*</label>
+                    <input type="number" id="product-price" step="0.01" min="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="product-quantity">Available Quantity (kg)*</label>
+                    <input type="number" id="product-quantity" min="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="product-image">Image URL*</label>
+                    <input type="url" id="product-image" required>
+                </div>
+                <div class="form-group">
+                    <label for="planted-date">Planted Date*</label>
+                    <input type="date" id="planted-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="harvest-date">Expected Harvest Date</label>
+                    <input type="date" id="harvest-date">
+                </div>
+                <div class="form-group">
+                    <label for="product-status">Status*</label>
+                    <select id="product-status" required>
+                        <option value="Growing">Growing</option>
+                        <option value="Harvested">Harvested</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">Save Fruit</button>
+            </form>
+        </div>
+    </div>
+
+    <script type="module">
+        import { auth } from '/Frontend/js/firebase-config.js';
+        import { signOut } from "firebase/auth";
+        
+        document.getElementById('logout-btn').addEventListener('click', async () => {
+            try {
+                await signOut(auth);
+                window.location.href = '/Frontend/login.html';
+            } catch (error) {
+                console.error("Logout error:", error);
+                alert("Error during logout. Please try again.");
+            }
+        });
+    </script>
+</body>
+</html>

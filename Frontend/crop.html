@@ -1,0 +1,197 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmRise - Crops</title>
+    <link rel="stylesheet" href="/Frontend/css/common.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="module" src="/Frontend/js/common.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-leaf"></i>
+            <span>FarmRise</span>
+        </div>
+        <div class="user-menu">
+            <span id="welcome-message">Welcome, Farmer</span>
+            <i class="fas fa-user-circle"></i>
+        </div>
+    </header>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="/Frontend/dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="/Frontend/crop.html" class="active"><i class="fas fa-seedling"></i> Crops</a></li>
+                <li><a href="/Frontend/fruit.html"><i class="fas fa-apple-alt"></i> Fruits</a></li>
+                <li><a href="/Frontend/vegetable.html"><i class="fas fa-carrot"></i> Vegetables</a></li> 
+                <li><a href="/Frontend/marketprice.html"><i class="fas fa-dollar-sign"></i> Market Prices</a></li>
+                <li><a href="/Frontend/index.html" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </nav>
+        <main class="products-page">
+            <h1 class="page-title">My Crops</h1>
+            <div class="product-actions">
+                <button id="add-product" class="btn-primary"><i class="fas fa-plus"></i> Add New Crop</button>
+                <select id="filter-products" class="filter-select">
+                    <option value="all">All Crops</option>
+                    <option value="Growing">Growing</option>
+                    <option value="Harvested">Harvested</option>
+                </select>
+            </div>
+            <div class="product-list">
+                <!-- Sample items will be replaced by dynamic content -->
+                <div class="product-item sample-item">
+                    <img src="/Images/Crops/Maize.jpg" alt="Maize" onerror="this.src='/Images/placeholder.jpg'">
+                    <div class="product-info">
+                        <h3>Maize (Corn)</h3>
+                        <p><strong>Price:</strong> ₹1.20/kg</p>
+                        <p><strong>Quantity:</strong> 500 kg</p>
+                        <p><strong>Status:</strong> Growing</p>
+                        <p><strong>Planted:</strong> May 1, 2023</p>
+                        <p><strong>Harvest:</strong> September 15, 2023</p>
+                        <p><strong>Description:</strong> High-quality maize perfect for food and feed production.</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="view-details btn-secondary">View Details</button>
+                        <button class="edit-product btn-secondary">Edit</button>
+                        <button class="delete-product btn-danger">Delete</button>
+                    </div>
+                </div>
+                <div class="product-item sample-item">
+                    <img src="/Images/Crops/Wheat.jpg" alt="Wheat" onerror="this.src='/Images/placeholder.jpg'">
+                    <div class="product-info">
+                        <h3>Wheat</h3>
+                        <p><strong>Price:</strong> ₹1.50/kg</p>
+                        <p><strong>Quantity:</strong> 300 kg</p>
+                        <p><strong>Status:</strong> Growing</p>
+                        <p><strong>Planted:</strong> June 1, 2023</p>
+                        <p><strong>Harvest:</strong> October 1, 2023</p>
+                        <p><strong>Description:</strong> Premium quality wheat for flour and food production.</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="view-details btn-secondary">View Details</button>
+                        <button class="edit-product btn-secondary">Edit</button>
+                        <button class="delete-product btn-danger">Delete</button>
+                    </div>
+                </div>
+                <div class="product-item sample-item">
+                    <img src="/Images/Crops/Rice.jpg" alt="Rice" onerror="this.src='/Images/placeholder.jpg'">
+                    <div class="product-info">
+                        <h3>Rice</h3>
+                        <p><strong>Price:</strong> ₹2.00/kg</p>
+                        <p><strong>Quantity:</strong> 400 kg</p>
+                        <p><strong>Status:</strong> Growing</p>
+                        <p><strong>Planted:</strong> April 15, 2023</p>
+                        <p><strong>Harvest:</strong> August 30, 2023</p>
+                        <p><strong>Description:</strong> Aromatic basmati rice, organically grown and pesticide-free.</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="view-details btn-secondary">View Details</button>
+                        <button class="edit-product btn-secondary">Edit</button>
+                        <button class="delete-product btn-danger">Delete</button>
+                    </div>
+                </div>
+                <div class="product-item sample-item">
+                    <img src="/Images/Crops/Coconut.jpg" alt="Coconut" onerror="this.src='/Images/placeholder.jpg'">
+                    <div class="product-info">
+                        <h3>Coconut</h3>
+                        <p><strong>Price:</strong> ₹25.00/piece</p>
+                        <p><strong>Quantity:</strong> 200 pieces</p>
+                        <p><strong>Status:</strong> Harvested</p>
+                        <p><strong>Planted:</strong> March 1, 2020</p>
+                        <p><strong>Harvest:</strong> Ongoing</p>
+                        <p><strong>Description:</strong> Fresh coconuts with sweet water and tender meat.</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="view-details btn-secondary">View Details</button>
+                        <button class="edit-product btn-secondary">Edit</button>
+                        <button class="delete-product btn-danger">Delete</button>
+                    </div>
+                </div>
+                <div class="product-item sample-item">
+                    <img src="/Images/Crops/Coffee.jpg" alt="Coffee" onerror="this.src='/Images/placeholder.jpg'">
+                    <div class="product-info">
+                        <h3>Coffee Beans</h3>
+                        <p><strong>Price:</strong> ₹8.50/kg</p>
+                        <p><strong>Quantity:</strong> 150 kg</p>
+                        <p><strong>Status:</strong> Harvested</p>
+                        <p><strong>Planted:</strong> February 1, 2021</p>
+                        <p><strong>Harvest:</strong> December 2023</p>
+                        <p><strong>Description:</strong> Premium arabica coffee beans, shade-grown and organic.</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="view-details btn-secondary">View Details</button>
+                        <button class="edit-product btn-secondary">Edit</button>
+                        <button class="delete-product btn-danger">Delete</button>
+                    </div>
+                </div>
+                <div class="product-item sample-item">
+                    <img src="/Images/Crops/Sugarcane.jpg" alt="Sugarcane" onerror="this.src='/Images/placeholder.jpg'">
+                    <div class="product-info">
+                        <h3>Sugarcane</h3>
+                        <p><strong>Price:</strong> ₹3.00/kg</p>
+                        <p><strong>Quantity:</strong> 1000 kg</p>
+                        <p><strong>Status:</strong> Growing</p>
+                        <p><strong>Planted:</strong> January 15, 2023</p>
+                        <p><strong>Harvest:</strong> December 2023</p>
+                        <p><strong>Description:</strong> Sweet sugarcane variety, perfect for jaggery and sugar production.</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="view-details btn-secondary">View Details</button>
+                        <button class="edit-product btn-secondary">Edit</button>
+                        <button class="delete-product btn-danger">Delete</button>
+                    </div>
+                </div>
+                <!-- Dynamic content will be loaded here -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Product Modal -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title">Add New Crop</h2>
+            <form id="product-form">
+                <div class="form-group">
+                    <label for="product-name">Crop Name*</label>
+                    <input type="text" id="product-name" required class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="product-price">Price (per kg)*</label>
+                    <input type="number" id="product-price" step="0.01" min="0" required class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="product-quantity">Available Quantity (kg)*</label>
+                    <input type="number" id="product-quantity" min="0" required class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="product-image">Image URL*</label>
+                    <input type="url" id="product-image" required class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="planted-date">Planted Date*</label>
+                    <input type="date" id="planted-date" required class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="harvest-date">Expected Harvest Date</label>
+                    <input type="date" id="harvest-date" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="product-status">Status*</label>
+                    <select id="product-status" required class="form-input">
+                        <option value="Growing">Growing</option>
+                        <option value="Harvested">Harvested</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">Save Crop</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

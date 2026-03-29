@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmRise - Vegetables</title>
+    <link rel="stylesheet" href="/Frontend/css/common.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="module" src="/Frontend/js/common.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-leaf"></i>
+            <span>FarmRise</span>
+        </div>
+        <div class="user-menu">
+            <span>Welcome, Farmer</span>
+            <i class="fas fa-user-circle"></i>
+        </div>
+    </header>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="/Frontend/dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="/Frontend/crop.html"><i class="fas fa-seedling"></i> Crops</a></li>
+                <li><a href="/Frontend/fruit.html"><i class="fas fa-apple-alt"></i> Fruits</a></li>
+                <li><a href="/Frontend/vegetable.html" class="active"><i class="fas fa-carrot"></i> Vegetables</a></li> 
+                <li><a href="/Frontend/marketprice.html"><i class="fas fa-dollar-sign"></i> Market Prices</a></li>
+                <li><a href="/Frontend/index.html" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </nav>
+        <main class="products-page">
+            <h1 class="page-title">My Vegetables</h1>
+            <div class="product-actions">
+                <button id="add-product"><i class="fas fa-plus"></i> Add New Vegetable</button>
+                <select id="filter-products">
+                    <option value="all">All Vegetables</option>
+                    <option value="Growing">Growing</option>
+                    <option value="Harvested">Harvested</option>
+                </select>
+            </div>
+            <div class="product-list">
+                <!-- Default vegetables will be loaded automatically -->
+                <div class="product-item">
+                    <img src="/Images/Vegetables/Tomato.jpg" alt="Tomato" onerror="this.src='/Images/placeholder.jpg'">
+                    <div class="product-info">
+                        <h3>Tomato</h3>
+                        <p><strong>Price:</strong> ₹1.00/kg</p>
+                        <p><strong>Quantity:</strong> 100 kg</p>
+                        <p><strong>Status:</strong> Harvested</p>
+                        <p><strong>Planted:</strong> April 10, 2023</p>
+                        <p><strong>Harvest:</strong> July 20, 2023</p>
+                        <p><strong>Description:</strong> Fresh, ripe tomatoes perfect for cooking and salads.</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="view-details">View Details</button>
+                        <button class="edit-product">Edit</button>
+                        <button class="delete-product">Delete</button>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="/Images/Vegetables/Carrot.jpg" alt="Carrot" onerror="this.src='/Images/placeholder.jpg'">
+                    <div class="product-info">
+                        <h3>Carrot</h3>
+                        <p><strong>Price:</strong> ₹0.80/kg</p>
+                        <p><strong>Quantity:</strong> 120 kg</p>
+                        <p><strong>Status:</strong> Harvested</p>
+                        <p><strong>Planted:</strong> May 5, 2023</p>
+                        <p><strong>Harvest:</strong> August 25, 2023</p>
+                        <p><strong>Description:</strong> Crunchy, sweet carrots rich in beta-carotene.</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="view-details">View Details</button>
+                        <button class="edit-product">Edit</button>
+                        <button class="delete-product">Delete</button>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="/Images/Vegetables/Onion.jpg" alt="Onion" onerror="this.src='/Images/placeholder.jpg'">
+                    <div class="product-info">
+                        <h3>Onion</h3>
+                        <p><strong>Price:</strong> ₹0.60/kg</p>
+                        <p><strong>Quantity:</strong> 200 kg</p>
+                        <p><strong>Status:</strong> Harvested</p>
+                        <p><strong>Planted:</strong> March 15, 2023</p>
+                        <p><strong>Harvest:</strong> June 30, 2023</p>
+                        <p><strong>Description:</strong> Red onions with strong flavor, essential for cooking.</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="view-details">View Details</button>
+                        <button class="edit-product">Edit</button>
+                        <button class="delete-product">Delete</button>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="/Images/Vegetables/Potato.webp" alt="Potato" onerror="this.src='/Images/placeholder.jpg'">
+                    <div class="product-info">
+                        <h3>Potato</h3>
+                        <p><strong>Price:</strong> ₹0.70/kg</p>
+                        <p><strong>Quantity:</strong> 300 kg</p>
+                        <p><strong>Status:</strong> Harvested</p>
+                        <p><strong>Planted:</strong> February 20, 2023</p>
+                        <p><strong>Harvest:</strong> May 15, 2023</p>
+                        <p><strong>Description:</strong> Fresh potatoes, versatile for various culinary uses.</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="view-details">View Details</button>
+                        <button class="edit-product">Edit</button>
+                        <button class="delete-product">Delete</button>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="/Images/Vegetables/Cabbage.jpg" alt="Cabbage" onerror="this.src='/Images/placeholder.jpg'">
+                    <div class="product-info">
+                        <h3>Cabbage</h3>
+                        <p><strong>Price:</strong> ₹0.90/kg</p>
+                        <p><strong>Quantity:</strong> 80 kg</p>
+                        <p><strong>Status:</strong> Harvested</p>
+                        <p><strong>Planted:</strong> April 1, 2023</p>
+                        <p><strong>Harvest:</strong> July 10, 2023</p>
+                        <p><strong>Description:</strong> Crisp cabbage heads, perfect for salads and cooking.</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="view-details">View Details</button>
+                        <button class="edit-product">Edit</button>
+                        <button class="delete-product">Delete</button>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="/Images/Vegetables/Cauliflower.jpg" alt="Cauliflower" onerror="this.src='/Images/placeholder.jpg'">
+                    <div class="product-info">
+                        <h3>Cauliflower</h3>
+                        <p><strong>Price:</strong> ₹1.20/kg</p>
+                        <p><strong>Quantity:</strong> 60 kg</p>
+                        <p><strong>Status:</strong> Harvested</p>
+                        <p><strong>Planted:</strong> March 25, 2023</p>
+                        <p><strong>Harvest:</strong> June 20, 2023</p>
+                        <p><strong>Description:</strong> Fresh white cauliflower, nutritious and versatile.</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="view-details">View Details</button>
+                        <button class="edit-product">Edit</button>
+                        <button class="delete-product">Delete</button>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="/Images/Vegetables/brocoli.jpg" alt="Broccoli" onerror="this.src='/Images/placeholder.jpg'">
+                    <div class="product-info">
+                        <h3>Broccoli</h3>
+                        <p><strong>Price:</strong> ₹2.50/kg</p>
+                        <p><strong>Quantity:</strong> 40 kg</p>
+                        <p><strong>Status:</strong> Harvested</p>
+                        <p><strong>Planted:</strong> April 5, 2023</p>
+                        <p><strong>Harvest:</strong> July 5, 2023</p>
+                        <p><strong>Description:</strong> Nutrient-rich broccoli florets, excellent for health.</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="view-details">View Details</button>
+                        <button class="edit-product">Edit</button>
+                        <button class="delete-product">Delete</button>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="/Images/Vegetables/Green Capsicum.jpg" alt="Green Capsicum" onerror="this.src='/Images/placeholder.jpg'">
+                    <div class="product-info">
+                        <h3>Green Capsicum</h3>
+                        <p><strong>Price:</strong> ₹1.50/kg</p>
+                        <p><strong>Quantity:</strong> 50 kg</p>
+                        <p><strong>Status:</strong> Harvested</p>
+                        <p><strong>Planted:</strong> March 30, 2023</p>
+                        <p><strong>Harvest:</strong> June 25, 2023</p>
+                        <p><strong>Description:</strong> Fresh green capsicum, adds crunch to dishes.</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="view-details">View Details</button>
+                        <button class="edit-product">Edit</button>
+                        <button class="delete-product">Delete</button>
+                    </div>
+                </div>
+                <!-- More vegetables will be loaded from Firebase -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Product Modal -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Vegetable</h2>
+            <form id="product-form">
+                <div class="form-group">
+                    <label for="product-name">Vegetable Name*</label>
+                    <input type="text" id="product-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="product-price">Price (per kg)*</label>
+                    <input type="number" id="product-price" step="0.01" min="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="product-quantity">Available Quantity (kg)*</label>
+                    <input type="number" id="product-quantity" min="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="product-image">Image URL*</label>
+                    <input type="url" id="product-image" required>
+                </div>
+                <div class="form-group">
+                    <label for="planted-date">Planted Date*</label>
+                    <input type="date" id="planted-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="harvest-date">Expected Harvest Date</label>
+                    <input type="date" id="harvest-date">
+                </div>
+                <div class="form-group">
+                    <label for="product-status">Status*</label>
+                    <select id="product-status" required>
+                        <option value="Growing">Growing</option>
+                        <option value="Harvested">Harvested</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">Save Vegetable</button>
+            </form>
+        </div>
+    </div>
+
+    <script type="module">
+        import { auth } from '/Frontend/js/firebase-config.js';
+        import { signOut } from "firebase/auth";
+        
+        document.getElementById('logout-btn').addEventListener('click', async () => {
+            try {
+                await signOut(auth);
+                window.location.href = '/Frontend/login.html';
+            } catch (error) {
+                console.error("Logout error:", error);
+                alert("Error during logout. Please try again.");
+            }
+        });
+    </script>
+</body>
+</html>

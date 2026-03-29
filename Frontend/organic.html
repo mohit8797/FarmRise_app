@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmRise - Organic Farming Techniques</title>
+    <link rel="stylesheet" href="/Frontend/css/organic.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-leaf"></i>
+            <span>FarmRise</span>
+        </div>
+        <div class="user-menu">
+            <span>Organic Farming Guide</span>
+            <i class="fas fa-seedling"></i>
+        </div>
+    </header>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="/Frontend/dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="/Frontend/organic.html" class="active"><i class="fas fa-recycle"></i> Organic Farming</a></li>
+                <li><a href="/Frontend/farming.html"><i class="fas fa-info-circle"></i> Crop Details</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="hero-banner">
+                <h1>Organic Farming Techniques</h1>
+                <p>Learn sustainable practices that improve soil health and crop yield</p>
+            </div>
+
+            <div class="technique-categories">
+                <h2><i class="fas fa-book-open"></i> Techniques</h2>
+                <div class="category-buttons">
+                    <button class="category-btn active" data-category="all">All</button>
+                    <button class="category-btn" data-category="soil">Soil</button>
+                    <button class="category-btn" data-category="pest">Pest Control</button>
+                </div>
+            </div>
+
+            <div class="techniques-container">
+                <!-- Composting Technique -->
+                <div class="technique-card" data-category="soil">
+                    <div class="technique-media">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/HxP0rBNhRQ0" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1586771107445-d3ca888129ce" alt="Compost pile">
+                    </div>
+                    <div class="technique-content">
+                        <h3><i class="fas fa-recycle"></i> Composting</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.5 (128 reviews)</span>
+                        </div>
+                        <p class="technique-description">
+                            Transform organic waste into nutrient-rich soil amendment. Layer green and brown materials in 1:3 ratio, maintain moisture, and turn regularly.
+                        </p>
+                        <div class="key-points">
+                            <p><strong>Benefits:</strong> Improves soil, reduces waste, natural fertilizer</p>
+                            <p><strong>Time:</strong> 3-12 months</p>
+                            <p><strong>Materials:</strong> Kitchen scraps, yard waste, water</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Natural Pest Control Technique -->
+                <div class="technique-card" data-category="pest">
+                    <div class="technique-media">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/8XhLrqxz1V8" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1586943101559-4cd32686a9b6" alt="Ladybug on plant">
+                    </div>
+                    <div class="technique-content">
+                        <h3><i class="fas fa-bug"></i> Natural Pest Control</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.0 (95 reviews)</span>
+                        </div>
+                        <p class="technique-description">
+                            Use beneficial insects, companion planting, and organic sprays to manage pests without chemicals.
+                        </p>
+                        <div class="key-points">
+                            <p><strong>Benefits:</strong> No chemicals, preserves ecosystem</p>
+                            <p><strong>Methods:</strong> Neem oil, ladybugs, companion plants</p>
+                            <p><strong>Best for:</strong> Vegetables, fruits, flowers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="/Frontend/js/organic.js"></script>
+</body>
+</html>

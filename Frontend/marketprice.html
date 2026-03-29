@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmRise - Market Prices</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/Frontend/css/marketprice.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <i class="fas fa-leaf"></i>
+            <span>FarmRise</span>
+        </div>
+        <button class="back-button" onclick="window.location.href='/Frontend/dashboard.html'">
+            <i class="fas fa-arrow-left"></i>
+            Back to Dashboard
+        </button>
+        <div class="profile">
+            <i class="fas fa-user-circle"></i>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="controls">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search products...">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            <div class="filter-group">
+                <select id="categoryFilter" class="filter-dropdown">
+                    <option value="all">All Categories</option>
+                    <option value="vegetables">Vegetables</option>
+                    <option value="fruits">Fruits</option>
+                    <option value="crops">Crops</option>
+                </select>
+                <button id="refreshBtn" class="refresh-btn">
+                    <i class="fas fa-sync-alt"></i> Refresh
+                </button>
+            </div>
+        </div>
+
+        <div class="price-display">
+            <div class="price-card featured">
+                <div class="price-header">
+                    <h3>Featured Price</h3>
+                    <span class="update-time">Updated: <span id="featuredUpdateTime">Just now</span></span>
+                </div>
+                <div class="featured-product" id="featuredProduct">
+                    <!-- Featured product will be loaded here -->
+                </div>
+            </div>
+
+            <div class="table-container">
+                <div class="table-header">
+                    <h3>Current Market Prices</h3>
+                    <span class="update-time">Updated: <span id="lastUpdateTime">Just now</span></span>
+                </div>
+                <table id="priceTable">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price (₹/kg)</th>
+                            <th>Change (24h)</th>
+                            <th>Market</th>
+                            <th>Last Updated</th>
+                        </tr>
+                    </thead>
+                    <tbody id="priceTableBody">
+                        <!-- Table content will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="data-sources">
+            <p>Data sources: <span id="dataSources">Loading sources...</span></p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>FarmRise © 2025 - Real-time Agricultural Market Data</p>
+            <div class="footer-links">
+                <a href="#" class="support-link"><i class="fas fa-question-circle"></i> Help</a>
+                <a href="#" class="support-link"><i class="fas fa-envelope"></i> Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-content">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Fetching latest market data...</p>
+        </div>
+    </div>
+
+    <script src="/Frontend/js/marketprice.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmRise - Crop Information</title>
+    <link rel="stylesheet" href="/Frontend/css/farming.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-leaf"></i>
+            <span>FarmRise</span>
+        </div>
+        <div class="user-menu">
+            <span>Crop Information</span>
+            <i class="fas fa-info-circle"></i>
+        </div>
+    </header>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="/Frontend/dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="/Frontend/organic.html"><i class="fas fa-recycle"></i> Organic Farming</a></li>
+                <li><a href="/Frontend/farming.html" class="active"><i class="fas fa-info-circle"></i> Crop Details</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="hero-banner">
+                <h1>Crop Information Center</h1>
+                <p>Find complete growing guides for all your crops</p>
+            </div>
+
+            <div class="search-section">
+                <div class="search-container">
+                    <input type="text" id="crop-search" placeholder="Search for a crop (e.g., tomato, wheat)">
+                    <button id="search-btn"><i class="fas fa-search"></i> Search</button>
+                </div>
+            </div>
+
+            <div class="results-container" id="results-container">
+                <!-- Default content before search -->
+                <div class="welcome-message">
+                    <h2><i class="fas fa-seedling"></i> Crop Knowledge Base</h2>
+                    <p>Search for any crop to get detailed information about:</p>
+                    <ul>
+                        <li>Optimal growing conditions</li>
+                        <li>Planting and harvesting timelines</li>
+                        <li>Soil and water requirements</li>
+                        <li>Common pests and diseases</li>
+                    </ul>
+                    <div class="popular-searches">
+                        <p>Try searching for: <span>tomato</span>, <span>wheat</span>, <span>rice</span>, or <span>potato</span></p>
+                    </div>
+                </div>
+
+                <!-- Results will be inserted here by JavaScript -->
+            </div>
+        </main>
+    </div>
+    <script src="/Frontend/js/farming.js"></script>
+</body>
+</html>

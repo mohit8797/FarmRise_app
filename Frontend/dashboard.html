@@ -1,0 +1,125 @@
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmRise - Dashboard</title>
+    <link rel="stylesheet" href="/Frontend/css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-leaf"></i>
+            <span>FarmRise</span>
+        </div>
+        
+        <div class="user-menu">
+            <span>Welcome, Farmer</span>
+            <i class="fas fa-user-circle"></i>
+            <button id="logout-btn" class="logout-btn">Logout</button>
+        </div>
+    </header>
+    
+    <div class="container">
+        
+        <nav>
+            
+            <ul>
+                <li><a href="/Frontend/dashboard.html" class="active"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="/Frontend/crop.html"><i class="fas fa-seedling"></i> Crops</a></li>
+                <li><a href="/Frontend/fruit.html"><i class="fas fa-apple-alt"></i> Fruits</a></li>
+                <li><a href="/Frontend/vegetable.html"><i class="fas fa-carrot"></i> Vegetables</a></li> 
+                <li><a href="/Frontend/marketprice.html"><i class="fas fa-dollar-sign"></i> Market Prices</a></li>
+                <li><a href="#" id="export-data"><i class="fas fa-file-export"></i> Export Data</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="dashboard-header">
+                <h1>Farm Overview</h1>
+                <div class="date-filter">
+                    <input type="text" id="date-range" placeholder="Select date range">
+                    <button id="apply-filter">Apply</button>
+                    <button id="reset-filter">Reset</button>
+                </div>
+            </div>
+            
+
+            <div class="stats-cards">
+                <div class="stat-card">
+                    <div class="stat-icon" style="background-color: #4CAF50;">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="total-crops">0</h3>
+                        <p>Total Crops</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background-color: #2196F3;">
+                        <i class="fas fa-apple-alt"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="total-fruits">0</h3>
+                        <p>Total Fruits</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background-color: #FF9800;">
+                        <i class="fas fa-carrot"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="total-vegetables">0</h3>
+                        <p>Total Vegetables</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background-color: #F44336;">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="total-value">₹0</h3>
+                        <p>Total Value</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-content">
+                <div class="chart-container">
+                    <h2>Harvest Timeline</h2>
+                    <canvas id="harvest-chart"></canvas>
+                </div>
+                <div class="recent-activity">
+                    <h2>Recent Activity</h2>
+                    <div class="activity-list" id="activity-list">
+                        <!-- Activities will be loaded here -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="upcoming-harvests">
+                <h2>Upcoming Harvests</h2>
+                <div class="harvest-list" id="upcoming-harvests">
+                    <!-- Upcoming harvests will be loaded here -->
+                </div>
+            </div>
+            <div class="recent-orders">
+                <h2>Recent Orders</h2>
+                <div class="orders-list" id="orders-list">
+                    <!-- Orders will be loaded here -->
+                </div>
+            </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="/Frontend/js/dashboard.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+</body>
+</html>
+

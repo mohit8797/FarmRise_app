@@ -1,0 +1,35 @@
+{
+  "name": "farmrise-backend",
+  "version": "1.0.0",
+  "description": "FarmRise - Connecting Organic Farmers with Consumers",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "farmrise",
+    "organic-farming",
+    "agriculture",
+    "farmers",
+    "marketplace"
+  ],
+  "author": "Mohit Redhu",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.13.1",
+    "mysql2": "^3.12.0",
+    "nodemailer": "^6.10.0",
+    "pg": "^8.11.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
