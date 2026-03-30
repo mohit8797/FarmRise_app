@@ -43,11 +43,13 @@ app.get('*', (req, res) => {
 
 const start = async () => {
   console.log('🚀 Starting FarmRise server...');
-  await initDb();
-
   app.listen(PORT, () => {
     console.log(`🚀 FarmRise Server running on port ${PORT}`);
     console.log(`🌍 Client origin: ${CLIENT_ORIGIN}`);
+  });
+
+  initDb().catch(err => {
+    console.error('❌ Database initialization failed after server start:', err);
   });
 };
 
