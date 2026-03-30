@@ -31,10 +31,11 @@ This project was built to demonstrate end-to-end web development skills across f
 - Deployed Website: https://farmrise-app.onrender.com
 
 ## Screenshots
+<img width="1470" height="956" alt="Screenshot 2026-03-30 at 2 02 40 PM" src="https://github.com/user-attachments/assets/239ef6ab-d962-4ff0-8798-1035afe4751b" />
+<img width="1470" height="956" alt="Screenshot 2026-03-30 at 2 03 04 PM" src="https://github.com/user-attachments/assets/92c45d19-4930-41fc-86d8-5b3bdbf2f0fe" />
+<img width="1470" height="956" alt="Screenshot 2026-03-30 at 2 03 16 PM" src="https://github.com/user-attachments/assets/ec5ea8c5-465a-47ba-945e-79ad786ff25f" />
+<img width="1470" height="956" alt="Screenshot 2026-03-30 at 2 03 27 PM" src="https://github.com/user-attachments/assets/629318fb-6f5b-4780-aed2-f17b854e1c03" />
 
-
-<img width="1470" height="956" alt="Screenshot 2026-03-30 at 1 17 33 PM" src="https://github.com/user-attachments/assets/68dff768-87a0-4407-b12f-56b0efe49b72" />
-<img width="1470" height="956" alt="Screenshot 2026-03-30 at 1 15 58 PM" src="https://github.com/user-attachments/assets/6f3479f0-730a-4dfb-b103-578fa947f7c3" />
 
 
 ## Why This Project Matters
