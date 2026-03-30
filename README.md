@@ -48,11 +48,6 @@ FarmRise highlights practical software engineering skills relevant for internshi
 - Connecting server-side logic with a relational database
 - Organizing a real project structure with assets, routes, controllers, and middleware
 
-## Resume Description
-
-You can use this short version in your resume:
-
-Built **FarmRise**, a full-stack agriculture marketplace web application connecting organic farmers with consumers. Developed a responsive frontend using HTML, CSS, and JavaScript, and implemented backend APIs with Node.js, Express.js, JWT authentication, and MySQL integration for user management and platform functionality.
 
 ## Author
 
