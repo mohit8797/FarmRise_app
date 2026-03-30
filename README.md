@@ -27,17 +27,15 @@ This project was built to demonstrate end-to-end web development skills across f
 
 ## Live Project
 
-- GitHub Repository: [Add your GitHub repo link here](https://github.com/mohit8797/FarmRise_app)
-- Deployed Website: [Add your deployed website link here](https://your-deployed-site-link-here)
+- GitHub Repository: https://github.com/mohit8797/FarmRise_app.git
+- Deployed Website: https://farmrise-app.onrender.com
 
 ## Screenshots
 
-Add your hosted screenshot links below after uploading images to GitHub, Cloudinary, or another image host.
 
-![Homepage](https://your-screenshot-link-1)
-![Login Page](https://your-screenshot-link-2)
-![Dashboard](https://your-screenshot-link-3)
-![Products Page](https://your-screenshot-link-4)
+<img width="1470" height="956" alt="Screenshot 2026-03-30 at 1 17 33 PM" src="https://github.com/user-attachments/assets/68dff768-87a0-4407-b12f-56b0efe49b72" />
+<img width="1470" height="956" alt="Screenshot 2026-03-30 at 1 15 58 PM" src="https://github.com/user-attachments/assets/6f3479f0-730a-4dfb-b103-578fa947f7c3" />
+
 
 ## Why This Project Matters
 
