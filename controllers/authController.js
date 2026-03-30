@@ -2,11 +2,10 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { getPool } = require('../config/db');
 
-const pool = getPool();
-
 const JWT_SECRET = process.env.JWT_SECRET || 'change-this-with-secure-value';
 
 const getUserByEmail = async (email) => {
+  const pool = getPool();
   const { rows } = await pool.query('SELECT id, full_name, email, password_hash, role, phone_number, is_verified FROM users WHERE email = $1', [email]);
   return rows[0];
 };
@@ -32,6 +31,7 @@ exports.registerUser = async (req, res) => {
       return res.status(400).json({ message: 'Email already exists' });
     }
 
+    const pool = getPool();
     const passwordHash = await bcrypt.hash(password, 12);
 
     const insert = await pool.query(
@@ -106,6 +106,7 @@ exports.getMe = async (req, res) => {
 
   try {
     const { id } = req.user;
+    const pool = getPool();
     const { rows } = await pool.query('SELECT id, full_name, email, role, phone_number, is_verified, created_at FROM users WHERE id = $1', [id]);
     if (rows.length === 0) {
       return res.status(404).json({ message: 'User not found' });

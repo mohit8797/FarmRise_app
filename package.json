@@ -2,7 +2,7 @@
   "name": "farmrise-backend",
   "version": "1.0.0",
   "description": "FarmRise - Connecting Organic Farmers with Consumers",
-  "main": "server.js",
+  "main": "server/index.js",
   "scripts": {
     "start": "node server/index.js",
     "dev": "nodemon server/index.js",
@@ -25,7 +25,6 @@
     "express-session": "^1.18.1",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.13.1",
-    "mysql2": "^3.12.0",
     "nodemailer": "^6.10.0",
     "pg": "^8.11.1"
   },

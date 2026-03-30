@@ -2,16 +2,40 @@ const { Pool } = require('pg');
 
 let pool;
 
+const getConnectionConfig = () => {
+  if (process.env.DATABASE_URL) {
+    return {
+      connectionString: process.env.DATABASE_URL,
+      ssl: { rejectUnauthorized: false },
+    };
+  }
+
+  if (
+    process.env.PGHOST &&
+    process.env.PGDATABASE &&
+    process.env.PGUSER &&
+    process.env.PGPASSWORD
+  ) {
+    return {
+      host: process.env.PGHOST,
+      port: process.env.PGPORT ? Number(process.env.PGPORT) : 5432,
+      database: process.env.PGDATABASE,
+      user: process.env.PGUSER,
+      password: process.env.PGPASSWORD,
+      ssl: { rejectUnauthorized: false },
+    };
+  }
+
+  return null;
+};
+
 const getPool = () => {
   if (!pool) {
-    const connectionString = process.env.DATABASE_URL;
-    if (!connectionString) {
-      throw new Error('DATABASE_URL not set');
+    const connectionConfig = getConnectionConfig();
+    if (!connectionConfig) {
+      throw new Error('PostgreSQL config not set. Add DATABASE_URL or Railway PGHOST/PGDATABASE/PGUSER/PGPASSWORD variables.');
     }
-    pool = new Pool({
-      connectionString,
-      ssl: { rejectUnauthorized: false },
-    });
+    pool = new Pool(connectionConfig);
     pool.on('connect', () => {
       console.log('✅ Connected to PostgreSQL database');
     });
@@ -24,6 +48,12 @@ const getPool = () => {
 };
 
 const initDb = async () => {
+  const connectionConfig = getConnectionConfig();
+  if (!connectionConfig) {
+    console.warn('⚠️ PostgreSQL config missing. Skipping database initialization.');
+    return false;
+  }
+
   const pool = getPool();
   console.log('🔄 Initializing database schema...');
 
@@ -92,6 +122,7 @@ const initDb = async () => {
   `);
 
   console.log('✅ PostgreSQL schema checked/initialized successfully.');
+  return true;
 };
 
 module.exports = { getPool, initDb };
